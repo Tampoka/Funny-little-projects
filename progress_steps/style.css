@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulidisplay=swap');
+
+:root {
+	--line-border-fill: #a3197c;
+	--line-border-empty: #e0e0e0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #7a82a3;
+	font-family: 'Muli', sans-serif;
+	margin: 0;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.container {
+	text-align: center;
+}
+.progress-container {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	margin-bottom: 30px;
+	max-width: 100%;
+	width: 350px;
+	/* border: 2px solid rgb(47, 52, 97);
+	padding: 25px; */
+}
+
+.progress-container::before {
+	content: '';
+	background-color: var(--line-border-empty);
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	height: 4px;
+	width: 100%;
+	z-index: -1;
+}
+
+.progress {
+	background-color: var(--line-border-fill);
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	height: 4px;
+	width: 0%;
+	z-index: -1;
+	transition: 0.4s ease;
+}
+
+.circle {
+	background-color: rgb(184, 187, 192);
+	color: rgb(15, 11, 26);
+	border-radius: 50%;
+	height: 40px;
+	width: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 3px solid var(--line-border-empty);
+	transition: 0.4s ease;
+}
+.circle.active {
+	border-color: var(--line-border-fill);
+}
+
+.btn-container {
+	display: flex;
+	justify-content: space-around;
+}
+.btn {
+	background-color: var(--line-border-fill);
+	color: rgb(15, 11, 26);
+	border: 0;
+	border-radius: 18px;
+	cursor: pointer;
+	font-family: inherit;
+	padding: 15px 40px;
+	margin: 5px;
+	font-size: 14px;
+}
+.btn:active {
+	transform: scale(0.98);
+}
+.btn:focus {
+	outline: 0;
+	/* outline: 1px solid #1f1919; */
+  box-shadow: 0 0 1pt 2pt #bf51a2;
+}
+.btn:disabled {
+	background-color: var(--line-border-empty);
+	cursor: not-allowed;
+}
