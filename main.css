@@ -16,8 +16,9 @@ body {
 }
 
 h1 {
-  margin: 10px;
+  margin: 20px;
   color: rgb(25, 129, 136);
+  font-size: 20px;
 }
 
 .box {
@@ -28,7 +29,7 @@ h1 {
   justify-content: center;
   width: 60%;
   height: 100px;
-  margin: 10px;
+  margin: 15px;
   border-radius: 10px;
   box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
   transform: translateX(400%);
@@ -49,5 +50,5 @@ h1 {
 
 .box a {
   text-decoration: none;
-  color: white;
+  color: rgb(237, 225, 225);
 }
